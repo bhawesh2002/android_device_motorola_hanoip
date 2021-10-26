@@ -20,15 +20,17 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 $(call inherit-product, device/motorola/sm6150-common/common.mk)
 
+#TODO: Adding vendor files
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/motorola/liber/liber-vendor.mk)
+#$(call inherit-product, vendor/motorola/liber/liber-vendor.mk)
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
 
+#TODO: add overlay folder
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+#DEVICE_PACKAGE_OVERLAYS += \
+ #   $(LOCAL_PATH)/overlay
 
 # Audio
 PRODUCT_COPY_FILES += \
