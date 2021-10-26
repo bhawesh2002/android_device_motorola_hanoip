@@ -18,18 +18,17 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-#TODO: add this file
-# Inherit from liber device
-#$(call inherit-product, device/motorola/liber/device.mk)
+# Inherit from haniop device
+#$(call inherit-product, device/motorola/haniop/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_haniop
-PRODUCT_DEVICE := haniop
+PRODUCT_NAME := hanoip_retail
+PRODUCT_DEVICE := hanoip
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Motorola Moto G40 Fusion
+PRODUCT_MODEL := moto g(40) fusion
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_AAPT_CONFIG := xxxhdpi
