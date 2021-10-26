@@ -1,0 +1,3 @@
+add_lunch_combo evo_haniop-user
+add_lunch_combo evo_haniop-userdebug
+add_lunch_combo evo_haniop-eng
