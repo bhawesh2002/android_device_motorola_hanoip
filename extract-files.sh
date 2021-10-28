@@ -6,42 +6,91 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# If we're being sourced by the common script that we called,
-# stop right here. No need to go down the rabbit hole.
-if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
-    return
-fi
-
 set -e
 
 export DEVICE=haniop
 export DEVICE_COMMON=sm6150-common
 export VENDOR=motorola
 
-"./../../${VENDOR}/${DEVICE_COMMON}/extract-files.sh" "$@"
-
+# Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-ANDROID_ROOT="$MY_DIR"/../../..
-BLOB_ROOT="$ANDROID_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary
+ANDROID_ROOT="${MY_DIR}/../../.."
 
-CAMERA_HAL_CHI="$BLOB_ROOT"/vendor/lib64/hw/com.qti.chi.override.so
-sed -i "s/libhidltransport.so/qtimutex.so\x00\x00\x00\x00\x00\x00\x00\x00/" "$CAMERA_HAL_CHI"
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+if [ ! -f "${HELPER}" ]; then
+    echo "Unable to find helper script at ${HELPER}"
+    exit 1
+fi
+source "${HELPER}"
 
-CHARGE_ONLY="$BLOB_ROOT"/vendor/bin/charge_only_mode
-for LIBMEMSET_SHIM in $(grep -L "libmemset_shim.so" "$CHARGE_ONLY"); do
-    patchelf --add-needed "libmemset_shim.so" "$LIBMEMSET_SHIM"
+function blob_fixup() {
+    case "${1}" in
+    system_ext/lib/libwfdnative.so)
+        sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
+        ;;
+    system_ext/lib64/libwfdnative.so)
+        sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
+        ;;
+
+    # Fix xml version
+    product/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml | product/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml)
+        sed -i 's/xml version="2.0"/xml version="1.0"/' "${2}"
+        ;;
+    esac
+}
+
+# Default to sanitizing the vendor folder before extraction
+CLEAN_VENDOR=true
+
+ONLY_COMMON=
+ONLY_TARGET=
+KANG=
+SECTION=
+
+while [ "${#}" -gt 0 ]; do
+    case "${1}" in
+        --only-common )
+                ONLY_COMMON=true
+                ;;
+        --only-target )
+                ONLY_TARGET=true
+                ;;
+        -n | --no-cleanup )
+                CLEAN_VENDOR=false
+                ;;
+        -k | --kang )
+                KANG="--kang"
+                ;;
+        -s | --section )
+                SECTION="${2}"; shift
+                CLEAN_VENDOR=false
+                ;;
+        * )
+                SRC="${1}"
+                ;;
+    esac
+    shift
 done
 
-VIDHANCE="$BLOB_ROOT"/vendor/lib64/libvidhance.so
-CAMERA_HAL="$BLOB_ROOT"/vendor/lib64/hw/camera.qcom.so
-LIBSSC="$BLOB_ROOT"/vendor/lib64/libssc.so
-LIBSENSORCAL="$BLOB_ROOT"/vendor/lib64/libsensorcal.so
-for LIBCOMPARETF2 in $(grep -L "libcomparetf2.so" "$VIDHANCE" "$CAMERA_HAL" "$LIBSSC" "$LIBSENSORCAL"); do
-    patchelf --add-needed "libcomparetf2.so" "$LIBCOMPARETF2"
-done
+if [ -z "${SRC}" ]; then
+    SRC="adb"
+fi
 
-for LIBDEMANGLE in $(grep -L "libdemangle.so" "$VIDHANCE"); do
-    patchelf --add-needed "libdemangle.so" "$LIBDEMANGLE"
-done
+if [ -z "${ONLY_TARGET}" ]; then
+    # Initialize the helper for common device
+    setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"
+
+    extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+fi
+
+if [ -z "${ONLY_COMMON}" ] && [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
+    # Reinitialize the helper for device
+    source "${MY_DIR}/../${DEVICE}/extract-files.sh"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false "${CLEAN_VENDOR}"
+
+    extract "${MY_DIR}/../${DEVICE}/proprietary-files.txt" "${SRC}" "${KANG}" --section "${SECTION}"
+fi
+
+"${MY_DIR}/setup-makefiles.sh"
