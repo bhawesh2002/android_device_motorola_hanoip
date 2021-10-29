@@ -14,7 +14,7 @@ Memory  | 4/6GB RAM
 Shipped Android Version | 11 API 30
 Storage | 64GB/128GB storage, microSDXC
 Battery | Non-removable Li-Po 6000mAh mAh battery
-Display | 1080x2460 pixels, 20:9 ratio, 6.8 inches, IPS LCD, 120Hz, HDR10 (~395 ppi density)
+Display | 1080x2460 pixels, 6.8 inches, IPS LCD, 120Hz, HDR10 (~395 ppi density)
 
 ## Device picture
 
