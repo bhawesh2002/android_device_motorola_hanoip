@@ -18,7 +18,7 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 PRODUCT_NAME := lineage_haniop
 PRODUCT_DEVICE := hanniop
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := Moto g(40) fusion
+PRODUCT_MODEL := moto g(40) fusion
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_AAPT_CONFIG := xxxhdpi

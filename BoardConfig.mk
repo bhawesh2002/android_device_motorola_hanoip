@@ -5,7 +5,7 @@
 #
 
 # Display density
-TARGET_SCREEN_DENSITY := 440
+TARGET_SCREEN_DENSITY := 395
 
 # Inherit from sm6150-common
 -include device/motorola/sm6150-common/BoardConfigCommon.mk
