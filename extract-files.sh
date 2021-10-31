@@ -14,7 +14,7 @@ fi
 set -e
 
 # Required!
-export DEVICE=haniop
+export DEVICE=hanoip
 export DEVICE_COMMON=sm6150-common
 export VENDOR=motorola
 
