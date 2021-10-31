@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_haniop.mk
+    $(LOCAL_DIR)/lineage_hanoip.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_haniop-user \
-    lineage_haniop-userdebug \
-    lineage_haniop-eng
+    lineage_hanoip-user \
+    lineage_hanoip-userdebug \
+    lineage_hanoip-eng
