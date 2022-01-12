@@ -92,3 +92,6 @@ TARGET_MODULE_ALIASES += \
 # Kernel modules - WLAN
 TARGET_MODULE_ALIASES += \
     wlan.ko:qca_cld3_wlan.ko
+
+# APEX
+DEXPREOPT_GENERATE_APEX_IMAGE := true
