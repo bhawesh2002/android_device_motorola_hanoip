@@ -184,3 +184,10 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Power
+TARGET_USES_INTERACTION_BOOST := true
+TARGET_RPM_MASTER_STAT := "/d/rpmh/master_stats"
+TARGET_RPM_STAT := "/d/rpmh/stats"
+TARGET_TAP_TO_WAKE_NODE := "/sys/class/sensors/dt-gesture/enable"
+TARGET_WLAN_POWER_STAT := "/sys/kernel/wlan/power_stats"
