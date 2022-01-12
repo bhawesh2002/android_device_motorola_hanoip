@@ -141,3 +141,11 @@ TARGET_USES_DISPLAY_RENDER_INTENTS := true
 TARGET_USES_GRALLOC4 := true
 TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
+
+# DRM
+TARGET_ENABLE_MEDIADRM_64 := true
+
+# Filesystem
+TARGET_FS_CONFIG_GEN := \
+    $(VENDOR_PATH)/config.fs \
+    $(VENDOR_PATH)/mot_aids.fs
