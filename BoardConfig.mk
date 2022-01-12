@@ -39,6 +39,11 @@ TARGET_USES_64_BIT_BINDER := true
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
 
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+TARGET_USES_UEFI := true
+
+
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
