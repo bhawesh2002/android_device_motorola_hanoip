@@ -88,3 +88,7 @@ TARGET_MODULE_ALIASES += \
  wglink_dlkm.ko:audio_wglink.ko \
  wsa881x_dlkm.ko:audio_wsa881x.ko \
  wsa_macro_dlkm.ko:audio_wsa_macro.ko \
+
+# Kernel modules - WLAN
+TARGET_MODULE_ALIASES += \
+    wlan.ko:qca_cld3_wlan.ko
