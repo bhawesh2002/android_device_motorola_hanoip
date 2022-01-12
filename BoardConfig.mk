@@ -5,7 +5,7 @@
 #
 
 # Display density
-TARGET_SCREEN_DENSITY := 395
+TARGET_SCREEN_DENSITY := 400
 
 DEVICE_PATH := device/motorola/hanoip
 
