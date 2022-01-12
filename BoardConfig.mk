@@ -191,3 +191,11 @@ TARGET_RPM_MASTER_STAT := "/d/rpmh/master_stats"
 TARGET_RPM_STAT := "/d/rpmh/stats"
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/sensors/dt-gesture/enable"
 TARGET_WLAN_POWER_STAT := "/sys/kernel/wlan/power_stats"
+
+# Recovery
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
+TARGET_RECOVERY_FSTAB := $(VENDOR_PATH)/fstab.qcom
