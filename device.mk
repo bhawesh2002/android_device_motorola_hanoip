@@ -50,3 +50,6 @@ AB_OTA_POSTINSTALL_CONFIG += \
 PRODUCT_PACKAGES += otapreopt_script
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Properties
+-include $(LOCAL_PATH)/properties.mk
