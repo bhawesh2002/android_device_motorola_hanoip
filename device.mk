@@ -457,7 +457,28 @@ PRODUCT_BOOT_JARS += \
     moto-rcsmanager.jar \
     moto-core_services.jar \
     moto-echolocateapi.jar \
-    
+
 PRODUCT_SYSTEM_SERVER_JARS += \
     moto-ims-ext \
     moto-telephony
+
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    ipacm-diag \
+    IPACM_cfg.xml \
+    libipanat \
+    liboffloadhal
+
+# IPC router config
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+
+# IRQ
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
+
+# IPv6
+PRODUCT_PACKAGES += \
+    ethertypes \
+    libebtc
