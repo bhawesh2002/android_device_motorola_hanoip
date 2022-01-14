@@ -166,7 +166,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-legacy \
     android.hardware.camera.provider@2.4-external \
     libxml2 \
-    snapshotctl \
+    snapshotctl 
 
 # CNE
 PRODUCT_PACKAGES += \
@@ -178,7 +178,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
     vendor.qti.hardware.data.cne.internal.server@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
-    vendor.qti.hardware.data.cne.internal.constants@1.0 \
+    vendor.qti.hardware.data.cne.internal.constants@1.0 
 
 # Common init scripts
 PRODUCT_PACKAGES += \
@@ -226,7 +226,7 @@ PRODUCT_PACKAGES += \
     init.mmi.overlay.rc \
     init.qcom.factory.rc \
     init.mmi.diag_mdlog.rc \
-    init.mmi.charge_only.rc \
+    init.mmi.charge_only.rc 
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
@@ -442,7 +442,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/split-permissions-google.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/split-permissions-google.xml \
     $(LOCAL_PATH)/configs/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/vendor.qti.hardware.data.connection-V1.0-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.0-java.xml \
-    $(LOCAL_PATH)/configs/vendor.qti.hardware.data.connection-V1.1-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml \
+    $(LOCAL_PATH)/configs/vendor.qti.hardware.data.connection-V1.1-java.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/vendor.qti.hardware.data.connection-V1.1-java.xml 
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -567,7 +567,7 @@ PRODUCT_PACKAGES += \
     libOmxG711Dec \
     libOmxQcelp13Dec \
     libOmxVdec \
-    libOmxVenc \
+    libOmxVenc 
 
 #stagefright
 PRODUCT_PACKAGES += \
@@ -609,7 +609,7 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_qtiflacdec \
     libstagefright_bufferpool@2.0.1 \
     libstagefright_bufferqueue_helper \
-    libstagefright_framecapture_utils \
+    libstagefright_framecapture_utils 
 
 # Perf
 PRODUCT_PACKAGES += \
@@ -717,7 +717,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/UimService.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/UimService.xml \
     $(LOCAL_PATH)/configs/vendor.qti.data.factory-V1.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.data.factory-V1.0-java.xml \
     $(LOCAL_PATH)/configs/vendor.qti.data.factory-V2.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.data.factory-V2.0-java.xml \
-    $(LOCAL_PATH)/configs/vendor.qti.ims.rcsconfig-V1.0-java.xm:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.ims.rcsconfig-V1.0-java.xm \
+    $(LOCAL_PATH)/configs/vendor.qti.ims.rcsconfig-V1.0-java.xm:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.ims.rcsconfig-V1.0-java.xm 
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -753,3 +753,14 @@ PRODUCT_PACKAGES += \
 # Vibrator
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.vibrator.service
+
+# Seccomp policy
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/seccomp/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
+    $(LOCAL_PATH)/seccomp/codec2.vendor.base.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.base.policy \
+    $(LOCAL_PATH)/seccomp/codec2.vendor.ext.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/codec2.vendor.ext.policy \
+    $(LOCAL_PATH)/seccomp/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
+    $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy \
+    $(LOCAL_PATH)/seccomp/qti-systemd.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qti-systemd.policy \
+    $(LOCAL_PATH)/seccomp/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+
