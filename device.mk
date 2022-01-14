@@ -794,4 +794,11 @@ PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service \
     vendor.qti.hardware.trustedui@1.0-service-qti
 
+# Update engine
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
 
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
