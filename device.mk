@@ -250,5 +250,43 @@ PRODUCT_PACKAGES += \
     libavservices_minijail.vendor \
     libavservices_minijail \
     libhwbinder.vendor
-
+# Display
+PRODUCT_PACKAGES += \
+    android.hardware.graphics.mapper@3.0-impl-qti-display \
+    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    android.hardware.graphics.composer@2.1-resources \
+    android.hardware.graphics.composer@2.4-service \
+    android.hardware.graphics.allocator@3.0 \
+    android.hardware.graphics.allocator@4.0 \
+    android.hardware.graphics.bufferqueue@1.0 \
+    android.hardware.graphics.bufferqueue@2.0 \
+    android.hardware.graphics.common-V1-ndk_platform \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.memtrack@1.0-service \
+    libgralloc.qti \
+    libgralloccore \
+    libgrallocutils \
+    libgralloctypes \
+    gralloc.sm6150 \
+    libdisplayconfig \
+    libdisplayconfig.qti \
+    libdisplayconfig.vendor \
+    libqdMetaData \
+    libqdMetaData.system \
+    libtinyxml \
+    libtinyxml2_1 \
+    libvulkan \
+    memtrack.sm6150 \
+    android.hardware.memtrack@1.0-service \
+    android.hardware.memtrack@1.0-impl \
+    vendor.display.config@1.15.vendor \
+    vendor.display.config@1.11 \
+    vendor.qti.hardware.display.allocator-service \
+    vendor.qti.hardware.display.composer-service \
+    vendor.qti.hardware.display.mapper@1.1.vendor \
+    vendor.qti.hardware.display.mapper@2.0.vendor \
+    vendor.qti.hardware.display.mapper@3.0.vendor \
+    vendor.qti.hardware.display.mapper@4.0.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.0 \
+    vendor.qti.hardware.display.mapperextensions@1.1
     
