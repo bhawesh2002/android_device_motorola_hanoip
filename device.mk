@@ -85,12 +85,12 @@ PRODUCT_COPY_FILES += \
  frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
  frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
  frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
- frameworks/native/data/etc/android.software.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.device_id_attestation.xml \
- frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml \
- frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
- frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
- frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
- frameworks/native/data/etc/android.software.vulkan.deqp.level.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml \
+ frameworks/native/data/etc/android \ftware.device_id_attestation.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android \ftware.device_id_attestation.xml \
+ frameworks/native/data/etc/android \ftware.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android \ftware.ipsec_tunnels.xml \
+ frameworks/native/data/etc/android \ftware.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android \ftware.midi.xml \
+ frameworks/native/data/etc/android \ftware.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android \ftware.sip.voip.xml \
+ frameworks/native/data/etc/android \ftware.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android \ftware.verified_boot.xml \
+ frameworks/native/data/etc/android \ftware.vulkan.deqp.level.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android \ftware.vulkan.deqp.level.xml \
  frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml \
  frameworks/native/data/etc/unavail.android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/unavail.android.hardware.sensor.compass.xml \
  frameworks/native/data/etc/vendor-qti-hardware-sensorscalibrate.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
@@ -108,7 +108,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.2-impl \
+    android.hardware \undtrigger@2.2-impl \
     android.hardware.bluetooth.audio@2.0-impl \
     audio.bluetooth.default \
     audio.primary.sm6150 \
@@ -168,3 +168,14 @@ PRODUCT_PACKAGES += \
     libxml2 \
     snapshotctl \
 
+# CNE
+PRODUCT_PACKAGES += \
+    libcneapiclient \
+    libcne \
+    libcneoplookup \
+    libcneqmiutils \
+    libcneapiclient \
+    vendor.qti.hardware.data.cne.internal.api@1.0 \
+    vendor.qti.hardware.data.cne.internal.server@1.0 \
+    vendor.qti.hardware.data.cne.internal.constants@1.0 \
+    vendor.qti.hardware.data.cne.internal.constants@1.0 \
