@@ -179,3 +179,54 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.cne.internal.server@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
     vendor.qti.hardware.data.cne.internal.constants@1.0 \
+
+# Common init scripts
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.qcom.zramwb \
+    init.class_main.sh \
+    init.crda.sh \
+    init.gadgethal.sh \
+    init.mdm.sh \
+    init.mmi.chipset.rc \
+    init.mmi.rc \
+    init.mmi.touch.sh \
+    init.mmi.usb.sh \
+    init.oem.hw.sh \
+    init.qcom.class_core.sh \
+    init.qcom.coex.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.rc \
+    init.qcom.sdio.sh \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.qti.dcvs.sh \
+    init.qti.fm.sh \
+    init.qti.ims.sh \
+    init.qti.fm.rc \
+    init.qti.qcv.rc \
+    init.qdmastats.rc \
+    init.time_daemon.rc \
+    init.embmssl_server.rc \
+    init.vendor.sensors.rc \
+    init.mmi.usb.rc \
+    init.qcom.usb.rc \
+    init.qcom.rc \
+    init.target.rc \
+    init.mmi.rc \
+    init.qti.ufs.rc \
+    init.mmi.diag.rc \
+    init.mmi.tcmd.rc \
+    init.mmi.wlan.rc \
+    init.mmi.debug.rc \
+    init.mmi.sensor.rc \
+    init.mmi.chipset.rc \
+    init.mmi.overlay.rc \
+    init.qcom.factory.rc \
+    init.mmi.diag_mdlog.rc \
+    init.mmi.charge_only.rc \
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
