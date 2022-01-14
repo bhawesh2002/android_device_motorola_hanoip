@@ -143,3 +143,13 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl
+    
+# Bluetooth
+PRODUCT_PACKAGES += \
+    liba2dpoffload \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor \
+    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    vendor.qti.hardware.bluetooth_sar@1.0.vendor \
+    vendor.qti.hardware.bluetooth_sar@1.1.vendro \
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
