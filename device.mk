@@ -610,3 +610,111 @@ PRODUCT_PACKAGES += \
     libstagefright_bufferpool@2.0.1 \
     libstagefright_bufferqueue_helper \
     libstagefright_framecapture_utils \
+
+# Perf
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.perf@2.2.vendor \
+    vendor.qti.hardware.perf@2.2-service
+
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power-service-qti \
+    libpower \
+    libpowermanager \
+    android.hardware.power@1.3 \
+    android.hardware.power-V1-cpp \
+
+# system_ext permissions files
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/afw-com.motorola.gesture.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/afw-com.motorola.gesture.xml \
+    $(LOCAL_PATH)/configs/afw-com.motorola.systemui.desk.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/afw-com.motorola.systemui.desk.xml \
+    $(LOCAL_PATH)/configs/afw-styles.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/afw-styles.xml \
+    $(LOCAL_PATH)/configs/android.software.live_wallpaper.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/android.software.live_wallpaper.xml \
+    $(LOCAL_PATH)/configs/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/audiosphere.xml \
+    $(LOCAL_PATH)/configs/com.android.carrierconfig.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.android.carrierconfig.xml \
+    $(LOCAL_PATH)/configs/com.android.emergency.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.android.emergency.xml \
+    $(LOCAL_PATH)/configs/com.android.hotwordenrollment.common.util.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.android.hotwordenrollment.common.util.xml \
+    $(LOCAL_PATH)/configs/com.android.settings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.android.settings.xml \
+    $(LOCAL_PATH)/configs/com.android.storagemanager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.android.storagemanager.xml \
+    $(LOCAL_PATH)/configs/com.android.systemui.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.android.systemui.xml \
+    $(LOCAL_PATH)/configs/com.motorola.android.tcmd.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.android.tcmd.xml \
+    $(LOCAL_PATH)/configs/com.motorola.androidx.camera.extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.androidx.camera.extensions.xml \
+    $(LOCAL_PATH)/configs/com.motorola.camera.desktop.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.camera.desktop.xml \
+    $(LOCAL_PATH)/configs/com.motorola.imager.access_V2.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.imager.access_V2.xml \
+    $(LOCAL_PATH)/configs/com.motorola.imager.V2.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.imager.V2.xml \
+    $(LOCAL_PATH)/configs/com.motorola.ims.cmadaptor.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.ims.cmadaptor.xml \
+    $(LOCAL_PATH)/configs/com.motorola.launcher3.twoline.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.launcher3.twoline.xml \
+    $(LOCAL_PATH)/configs/com.motorola.launcher3_feature.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.launcher3_feature.xml \
+    $(LOCAL_PATH)/configs/com.motorola.libimgTuner.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.libimgTuner.xml \
+    $(LOCAL_PATH)/configs/com.motorola.mobiledesktop.core.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.mobiledesktop.core.xml \
+    $(LOCAL_PATH)/configs/com.motorola.msimsettings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.msimsettings.xml \
+    $(LOCAL_PATH)/configs/com.motorola.paks.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.paks.xml \
+    $(LOCAL_PATH)/configs/com.motorola.permission.diag.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.permission.diag.xml \
+    $(LOCAL_PATH)/configs/com.motorola.software.notification.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.software.notification.xml \
+    $(LOCAL_PATH)/configs/com.motorola.software.sprint.hidden_menu.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.motorola.software.sprint.hidden_menu.xml \
+    $(LOCAL_PATH)/configs/com.nxp.ls.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.nxp.ls.xml \
+    $(LOCAL_PATH)/configs/com.nxp.mifare.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.nxp.mifare.xml \
+    $(LOCAL_PATH)/configs/com.nxp.nfc.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.nxp.nfc.xml \
+    $(LOCAL_PATH)/configs/com.qti.location.sdk.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.qti.location.sdk.xml \
+    $(LOCAL_PATH)/configs/com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.qualcomm.location.xml \
+    $(LOCAL_PATH)/configs/com.qualcomm.qmapbridge.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.qualcomm.qmapbridge.xml \
+    $(LOCAL_PATH)/configs/com.qualcomm.qti.imscmservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.qualcomm.qti.imscmservice.xml \
+    $(LOCAL_PATH)/configs/com.qualcomm.qti.imscmservice-V2.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.qualcomm.qti.imscmservice-V2.0-java.xml \
+    $(LOCAL_PATH)/configs/com.qualcomm.qti.imscmservice-V2.1-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.qualcomm.qti.imscmservice-V2.1-java.xml \
+    $(LOCAL_PATH)/configs/com.qualcomm.qti.imscmservice-V2.2-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.qualcomm.qti.imscmservice-V2.2-java.xml \
+    $(LOCAL_PATH)/configs/com.qualcomm.qti.izattools.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.qualcomm.qti.izattools.xml \
+    $(LOCAL_PATH)/configs/com.st.android.nfc_extensions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.st.android.nfc_extensions.xml \
+    $(LOCAL_PATH)/configs/com.verizon.os.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.verizon.os.xml \
+    $(LOCAL_PATH)/configs/embms.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/embms.xml \
+    $(LOCAL_PATH)/configs/embms-noship_product_privapp_permissions_qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/embms-noship_product_privapp_permissions_qti.xml \
+    $(LOCAL_PATH)/configs/feature-com.motorola.motcameradesktop.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/feature-com.motorola.motcameradesktop.xml \
+    $(LOCAL_PATH)/configs/feature-com.motorola.motolivewallpaper3.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/feature-com.motorola.motolivewallpaper3.xml \
+    $(LOCAL_PATH)/configs/feature-permissions-com.summit.motorola.rcs.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/feature-permissions-com.summit.motorola.rcs.xml \
+    $(LOCAL_PATH)/configs/izat.xt.srv.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/izat.xt.srv.xml \
+    $(LOCAL_PATH)/configs/nexosSDK.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/nexosSDK.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.att.iqi.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.att.iqi.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.google.android.apps.wallpaper.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.google.android.apps.wallpaper.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.android.fota.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.android.fota.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.android.jvtcmd.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.android.jvtcmd.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.android.providers.chromehomepage.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.android.providers.chromehomepage.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.bach.modemstats.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.bach.modemstats.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.ccc.devicemanagement.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.ccc.devicemanagement.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.ccc.notificationQ.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.ccc.notificationQ.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.ccc.ota.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.ccc.ota.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.coresettingsext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.coresettingsext.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.demo.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.demo.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.gesture.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.gesture.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.hiddenmenuapp.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.hiddenmenuapp.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.imagertuning_V2.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.imagertuning_V2.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.iqimotmetrics.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.iqimotmetrics.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.launcher3.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.launcher3.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.lifetimedata.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.lifetimedata.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.mobiledesktop.core.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.mobiledesktop.core.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.motocare.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.motocare.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.motocit.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.motocit.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.msimsettings.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.msimsettings.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.paks.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.paks.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.rcsConfigService.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.rcsConfigService.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.setup.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.setup.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.systemui.desk.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.systemui.desk.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.wifi.motowifimetrics.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.motorola.wifi.motowifimetrics.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.qualcomm.atfwd.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.qualcomm.atfwd.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.qualcomm.location.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.qualcomm.location.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.summit.motorola.rcs.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-com.summit.motorola.rcs.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-google-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-google-system-ext.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-styles.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/privapp-permissions-styles.xml \
+    $(LOCAL_PATH)/configs/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qcrilhook.xml \
+    $(LOCAL_PATH)/configs/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_libpermissions.xml \
+    $(LOCAL_PATH)/configs/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_permissions.xml \
+    $(LOCAL_PATH)/configs/qti_telephony_hidl_wrapper.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_hidl_wrapper.xml \
+    $(LOCAL_PATH)/configs/qti_telephony_utils.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_utils.xml \
+    $(LOCAL_PATH)/configs/RemoteSimlock.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/RemoteSimlock.xml \
+    $(LOCAL_PATH)/configs/RemoteSimlockManager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/RemoteSimlockManager.xml \
+    $(LOCAL_PATH)/configs/telephonyservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/telephonyservice.xml \
+    $(LOCAL_PATH)/configs/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/telephony_system-ext_privapp-permissions-qti.xml \
+    $(LOCAL_PATH)/configs/UimGba.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/UimGba.xml \
+    $(LOCAL_PATH)/configs/UimGbaManager.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/UimGbaManager.xml \
+    $(LOCAL_PATH)/configs/UimService.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/UimService.xml \
+    $(LOCAL_PATH)/configs/vendor.qti.data.factory-V1.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.data.factory-V1.0-java.xml \
+    $(LOCAL_PATH)/configs/vendor.qti.data.factory-V2.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.data.factory-V2.0-java.xml \
+    $(LOCAL_PATH)/configs/vendor.qti.ims.rcsconfig-V1.0-java.xm:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.ims.rcsconfig-V1.0-java.xm \
