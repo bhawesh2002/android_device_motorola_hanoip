@@ -289,4 +289,28 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapper@4.0.vendor \
     vendor.qti.hardware.display.mapperextensions@1.0 \
     vendor.qti.hardware.display.mapperextensions@1.1
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3-service.clearkey \
+    android.hardware.drm@1.3-service.widevine
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd \
+    fastboot
+
+# For config.fs
+PRODUCT_PACKAGES += \
+    fs_config_files \
+    fs_config_dirs
+
+
+# Fwk-detect
+PRODUCT_PACKAGES += \
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti \
+    libvndfwk_detect_jni.qti.vendor
+
     
