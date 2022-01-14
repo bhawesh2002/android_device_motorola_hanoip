@@ -741,3 +741,15 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1 \
     librmnetctl \
     libxml2
+
+# USB HAL
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Vendor libstdc++
+PRODUCT_PACKAGES += \
+    libstdc++.vendor
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.vibrator.service
