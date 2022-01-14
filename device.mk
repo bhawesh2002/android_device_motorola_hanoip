@@ -569,6 +569,7 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
 
+#stagefright
 PRODUCT_PACKAGES += \
     libstagefright \
     libstagefrighthw \
