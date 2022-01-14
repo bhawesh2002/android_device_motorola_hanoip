@@ -834,3 +834,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
     $(LOCAL_PATH)/wifi/wpa_supplicant.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant.conf 
 
+# WiFi Display
+PRODUCT_PACKAGES += \
+    libnlnetmgr \
+    libwfds 
+
+PRODUCT_BOOT_JARS += \
+    WfdCommon
