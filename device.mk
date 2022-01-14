@@ -230,3 +230,19 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore \
+    capabilityconfigstoretest \
+
+# Cryptfshw
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0.vendor \
+    liboemcrypto \
+    uncrypt \
+    libcrypto \
+    libcrypto \
+    libcrypto_utils    
+
+    
