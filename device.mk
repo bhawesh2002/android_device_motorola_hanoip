@@ -153,3 +153,18 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.bluetooth_sar@1.1.vendro \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
+
+# Camera
+PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0 \
+    android.frameworks.cameraservice.common@2.0 \
+    android.frameworks.cameraservice.device@2.0 \
+    android.frameworks.cameraservice.service@2.0 \
+    android.frameworks.cameraservice.service@2.1 \
+    android.hardware.camera.provider@2.4-impl \
+    android.hardware.camera.provider@2.4-service_64 \
+    android.hardware.camera.provider@2.4-legacy \
+    android.hardware.camera.provider@2.4-external \
+    libxml2 \
+    snapshotctl \
+
