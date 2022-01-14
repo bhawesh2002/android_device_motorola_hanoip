@@ -371,8 +371,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/com.motorola.moto-uirefresh.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.moto-uirefresh.xml \
     $(LOCAL_PATH)/configs/com.motorola.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.omadm.service.xml \
     $(LOCAL_PATH)/configs/com.motorola.photoeditor.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.photoeditor.xml \
-    $(LOCAL_PATH)/configs/com.motorola.software.fmradioservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.software.fmradioservice.xml \
-    $(LOCAL_PATH)/configs/com.motorola.software.guideme.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.software.guideme.xml \
+    $(LOCAL_PATH)/configs/com.motorola \ftware.fmradioservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola \ftware.fmradioservice.xml \
+    $(LOCAL_PATH)/configs/com.motorola \ftware.guideme.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola \ftware.guideme.xml \
     $(LOCAL_PATH)/configs/com.motorola.timeweatherwidget.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.timeweatherwidget.xml \
     $(LOCAL_PATH)/configs/com.nxp.mifare.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/configs/com.nxp.mifare.xml \
     $(LOCAL_PATH)/configs/qti.snapdragon.sdk.display.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/qti.snapdragon.sdk.display.xml \
@@ -397,7 +397,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/com.google.android.feature.ZERO_TOUCH.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.feature.ZERO_TOUCH.xml \
     $(LOCAL_PATH)/configs/com.google.preload_photos.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.preload_photos.xml \
     $(LOCAL_PATH)/configs/deviceowner-configuration-com.motorola.camera3.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/deviceowner-configuration-com.motorola.camera3.xml \
-    $(LOCAL_PATH)/configs/feature-com.uros.software.goodspeed.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/feature-com.uros.software.goodspeed.xml \
+    $(LOCAL_PATH)/configs/feature-com.uros \ftware.goodspeed.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/feature-com.uros \ftware.goodspeed.xml \
     $(LOCAL_PATH)/configs/ims_ext_common.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/ims_ext_common.xml \
     $(LOCAL_PATH)/configs/privapp-permissions.com.facebook.system.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions.com.facebook.system.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-co.sitic.pp.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-co.sitic.pp.xml \
@@ -436,7 +436,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-com.payjoy.access.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.payjoy.access.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.qualcomm.qcrilmsgtunnel.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.qualcomm.qcrilmsgtunnel.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.telcel.contenedor.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.telcel.contenedor.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.uros.software.goodspeed.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.uros.software.goodspeed.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-com.uros \ftware.goodspeed.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.uros \ftware.goodspeed.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-google-comms-suite.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-comms-suite.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-google-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-google-product.xml \
     $(LOCAL_PATH)/configs/split-permissions-google.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/split-permissions-google.xml \
@@ -549,3 +549,63 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml
 
+# OMX
+PRODUCT_PACKAGES += \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
+    libavservices_minijail_vendor \
+    libc2dcolorconvert \
+    libcodec2_hidl@1.0 \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_vndk.vendor \
+    libcodec2_hidl_client@1.1 \
+    libOmxVpp \
+    libOmxAacDec \
+    libOmxAmrDec \
+    libOmxCore \
+    libOmxEvrcDec \
+    libOmxG711Dec \
+    libOmxQcelp13Dec \
+    libOmxVdec \
+    libOmxVenc \
+
+PRODUCT_PACKAGES += \
+    libstagefright \
+    libstagefrighthw \
+    libstagefright_omx \
+    libstagefright_softomx \
+    libstagefright_flacdec \
+    libstagefright_httplive \
+    libstagefright_codecbase \
+    libstagefright_omx_utils \
+    libstagefright_xmlparser \
+    libstagefright_foundation \
+    libstagefright_enc_common \
+    libstagefright_soft_gsmdec \
+    libstagefright_soft_aacdec \
+    libstagefright_soft_aacenc \
+    libstagefright_soft_amrdec \
+    libstagefright_soft_avcdec \
+    libstagefright_soft_avcenc \
+    libstagefright_soft_mp3dec \
+    libstagefright_soft_rawdec \
+    libstagefright_soft_vpxdec \
+    libstagefright_soft_vpxenc \
+    libstagefright_amrnb_common \
+    libstagefright_http_support \
+    libstagefright_soft_flacdec \
+    libstagefright_soft_flacenc \
+    libstagefright_soft_g711dec \
+    libstagefright_soft_hevcdec \
+    libstagefright_soft_opusdec \
+    libstagefright_soft_amrnbenc \
+    libstagefright_soft_amrwbenc \
+    libstagefright_soft_mpeg2dec \
+    libstagefright_soft_mpeg4dec \
+    libstagefright_soft_mpeg4enc \
+    libstagefright_softomx_plugin \
+    libstagefright_soft_vorbisdec \
+    libstagefright_soft_qtiflacdec \
+    libstagefright_bufferpool@2.0.1 \
+    libstagefright_bufferqueue_helper \
+    libstagefright_framecapture_utils \
