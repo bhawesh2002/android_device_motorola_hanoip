@@ -482,3 +482,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
+
+# Lights
+PRODUCT_PACKAGES += \
+    motorola.hardware.light@1.0 \
+    hw/lights.sm6150 \
+    android.hardware.lights-qti.rc \
+    hw/motorola.hardware.light@1.0-impl \
+    motorola.hardware.light@1.0-service \
+    android.hardware.lights-qti.xml \
+
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm \
+    vendor.lineage.livedisplay@2.0-service-sysfs
