@@ -718,3 +718,18 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/vendor.qti.data.factory-V1.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.data.factory-V1.0-java.xml \
     $(LOCAL_PATH)/configs/vendor.qti.data.factory-V2.0-java.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.data.factory-V2.0-java.xml \
     $(LOCAL_PATH)/configs/vendor.qti.ims.rcsconfig-V1.0-java.xm:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/vendor.qti.ims.rcsconfig-V1.0-java.xm \
+
+# QMI
+PRODUCT_PACKAGES += \
+    libjson \
+    libjsoncpp \
+    libqti_vndfwk_detect \
+    libqti_vndfwk_detect.vendor
+
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.va_aosp.support=1
+
+PRODUCT_ODM_PROPERTIES += \
+    ro.vendor.qti.va_odm.support=1
+
+
