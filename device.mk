@@ -533,3 +533,19 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml
 
+# Misc
+PRODUCT_PACKAGES += \
+    libchrome \
+    libchrome.vendor
+
+# MotoActions
+PRODUCT_PACKAGES += \
+    MotoActions
+
+# Net
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml
+
