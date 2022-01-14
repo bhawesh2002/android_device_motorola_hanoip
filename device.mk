@@ -243,6 +243,12 @@ PRODUCT_PACKAGES += \
     uncrypt \
     libcrypto \
     libcrypto \
-    libcrypto_utils    
+    libcrypto_utils
+
+# Dependencies
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor \
+    libavservices_minijail \
+    libhwbinder.vendor
 
     
