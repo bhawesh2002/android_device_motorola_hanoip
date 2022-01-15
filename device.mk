@@ -34,6 +34,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage/packages/apps/Snap
 
 # A/B
+
+# A/B
+ENABLE_VIRTUAL_AB := true
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
@@ -44,7 +48,7 @@ AB_OTA_PARTITIONS += \
     vendor \
     vbmeta \
     vbmeta_system \
-	vendor_boot
+    vendor_boot
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
