@@ -33,7 +33,7 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage/lineage-sdk \
     $(LOCAL_PATH)/overlay-lineage/packages/apps/Snap
 
-# A/B
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # A/B
 ENABLE_VIRTUAL_AB := true
