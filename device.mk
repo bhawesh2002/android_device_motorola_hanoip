@@ -59,7 +59,22 @@ AB_OTA_POSTINSTALL_CONFIG += \
 # A/B OTA dexopt package
 PRODUCT_PACKAGES += otapreopt_script
 
+# Update engine
+PRODUCT_PACKAGES += \
+    update_engine \
+    update_engine_sideload \
+    update_verifier
+
+PRODUCT_PACKAGES_DEBUG += \
+    update_engine_client
+
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# tell update_engine to not change dynamic partition table during updates
+# needed since our qti_dynamic_partitions does not include
+# vendor and odm and we also dont want to AB update them
+
+TARGET_ENFORCE_AB_OTA_PARTITION_LIST := true
 
 # Properties
 -include $(LOCAL_PATH)/properties.mk
@@ -803,15 +818,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service \
     vendor.qti.hardware.trustedui@1.0-service-qti
-
-# Update engine
-PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
 
 # VNDK
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := strict
