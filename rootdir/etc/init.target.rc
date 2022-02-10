@@ -28,11 +28,14 @@
 #
 
 import /vendor/etc/init/hw/init.mmi.rc
-import /vendor/etc/init/hw/init.qcom.power.rc
 
 on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/modprobe -a -d /vendor/lib/modules audio_wglink audio_q6_pdr audio_q6_notifier audio_snd_event audio_apr audio_adsp_loader audio_q6 audio_native audio_usf audio_pinctrl_wcd audio_pinctrl_lpi audio_swr audio_platform audio_hdmi audio_wcd_spi audio_stub audio_wcd_core audio_wsa881x audio_hdmi audio_bolero_cdc audio_wsa_macro audio_va_macro audio_rx_macro audio_tx_macro audio_machine_talos audio_wcd937x audio_wcd937x_slave
     write /proc/sys/kernel/sched_boost 1
+    mkdir /dsp 0771 media media
+    mkdir /firmware 0771 system system
+    mkdir /bt_firmware 0771 system system
+    symlink /data/tombstones /tombstones
 
 on init
     write /dev/stune/foreground/schedtune.sched_boost_no_override 1
@@ -45,13 +48,13 @@ on init
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+    start logd
 
 on early-fs
     start vold
 
 on fs
-    start hwservicemanager
-    mount_all /vendor/etc/fstab.qcom --early
+    mount_all --early
     chown root system /mnt/vendor/persist
     chmod 0771 /mnt/vendor/persist
     restorecon_recursive /mnt/vendor/persist
@@ -60,22 +63,12 @@ on fs
 on post-fs
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
+    write /dev/ipa 1
 
 on late-fs
     wait_for_prop hwservicemanager.ready true
-
-    # Start services for bootanim
-    start surfaceflinger
-    start bootanim
-    start vendor.hwcomposer-2-4
-    start vendor.configstore-hal
-    start vendor.qti.hardware.display.allocator
-    start vendor.light
-
     exec_start wait_for_keymaster
-    mount_all /vendor/etc/fstab.qcom --late
-    # Boot time fs tune
-    write /sys/block/dm-9/queue/read_ahead_kb 2048
+    mount_all --late
 
 service sec_nvm /vendor/bin/sec_nvm
     class core
@@ -109,8 +102,8 @@ on boot
     write /dev/cpuset/background/cpus 0-7
     write /dev/cpuset/system-background/cpus 0-7
 
-    # Add a cpuset for the camera daemon
-    # We want all cores for camera
+# Add a cpuset for the camera daemon
+# We want all cores for camera
     mkdir /dev/cpuset/camera-daemon
     write /dev/cpuset/camera-daemon/cpus 0-7
     write /dev/cpuset/camera-daemon/mems 0
@@ -118,7 +111,7 @@ on boot
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
-    #Load WLAN driver
+#Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
 #USB controller configuration
@@ -129,13 +122,16 @@ on boot
     setprop vendor.usb.qdss.inst.name "qdss"
     setprop sys.usb.configfs 1
 
-    # access permissions for FPC service
+# access permissions for FPC service
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/irq
     chown system system /sys/bus/platform/devices/soc/soc:fpc1020/wakeup_enable
-    
-    # Disable serial console
-    stop console
 
+#start camera server as daemon
+#service qcamerasvr /system/bin/mm-qcamera-daemon
+#    class late_start
+#    user camera
+#    group camera system inet input graphics
+#pd-mapper
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
     user system
