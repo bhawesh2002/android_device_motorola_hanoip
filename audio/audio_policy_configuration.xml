@@ -3,7 +3,7 @@
     <!-- version section contains a “version” tag in the form “major.minor” e.g version=”1.0” -->
 
     <!-- Global configuration Decalaration -->
-    <globalConfiguration speaker_drc_enabled="false" call_screen_mode_supported="true"/>
+    <globalConfiguration speaker_drc_enabled="false"/>
 
     <!-- Modules section:
         There is one section per audio HW module present on the platform.
@@ -188,6 +188,28 @@
                        sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="fm input" sources="FM tuner"/>
                 <route type="mix" sink="hifi_input" sources="USB Device In,USB Headset In" />
+            </routes>
+        </module>
+
+        <!-- A2dp Audio HAL -->
+        <module name="a2dp" halVersion="2.0">
+            <mixPorts>
+                <mixPort name="a2dp input" role="sink">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="44100,48000" channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
+                </mixPort>
+            </mixPorts>
+
+            <devicePorts>
+                <devicePort tagName="BT A2DP In" type="AUDIO_DEVICE_IN_BLUETOOTH_A2DP" role="source">
+                    <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
+                             samplingRates="44100,48000" channelMasks="AUDIO_CHANNEL_IN_MONO,AUDIO_CHANNEL_IN_STEREO"/>
+                </devicePort>
+            </devicePorts>
+
+            <routes>
+                <route type="mix" sink="a2dp input"
+                       sources="BT A2DP In"/>
             </routes>
         </module>
 
