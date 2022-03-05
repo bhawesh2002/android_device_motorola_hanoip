@@ -389,24 +389,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/com.motorola.camera3.hanoip.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.camera3.hanoip.xml \
     $(LOCAL_PATH)/configs/com.motorola.camera3.lens.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.camera3.lens.xml \
     $(LOCAL_PATH)/configs/com.motorola.camera3.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.camera3.xml \
-    $(LOCAL_PATH)/configs/com.motorola.easyprefix.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.easyprefix.xml \
-    $(LOCAL_PATH)/configs/com.motorola.faceunlock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.faceunlock.xml \
-    $(LOCAL_PATH)/configs/com.motorola.gamemode.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.gamemode.xml \
-    $(LOCAL_PATH)/configs/com.motorola.help.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.help.xml \
-    $(LOCAL_PATH)/configs/com.motorola.maya.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.maya.xml \
-    $(LOCAL_PATH)/configs/com.motorola.motodisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.motodisplay.xml \
-    $(LOCAL_PATH)/configs/com.motorola.moto-uirefresh.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.moto-uirefresh.xml \
     $(LOCAL_PATH)/configs/com.motorola.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.omadm.service.xml \
-    $(LOCAL_PATH)/configs/com.motorola.photoeditor.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.photoeditor.xml \
     $(LOCAL_PATH)/configs/com.motorola \ftware.fmradioservice.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola \ftware.fmradioservice.xml \
     $(LOCAL_PATH)/configs/com.motorola \ftware.guideme.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola \ftware.guideme.xml \
     $(LOCAL_PATH)/configs/com.motorola.timeweatherwidget.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.motorola.timeweatherwidget.xml \
     $(LOCAL_PATH)/configs/com.nxp.mifare.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/configs/com.nxp.mifare.xml \
     $(LOCAL_PATH)/configs/qti.snapdragon.sdk.display.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/qti.snapdragon.sdk.display.xml \
-    $(LOCAL_PATH)/configs/afw-com.facebook.appmanager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/afw-com.facebook.appmanager.xml \
-    $(LOCAL_PATH)/configs/afw-com.facebook.katana.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/afw-com.facebook.katana.xml \
-    $(LOCAL_PATH)/configs/afw-com.facebook.system.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/afw-com.facebook.system.xml \
-    $(LOCAL_PATH)/configs/afw-com.google.android.apps.messaging.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/afw-com.google.android.apps.messaging.xml \
     $(LOCAL_PATH)/configs/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.biometrics.face.xml \
     $(LOCAL_PATH)/configs/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.nfc.hce.xml \
     $(LOCAL_PATH)/configs/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.nfc.uicc.xml \
@@ -422,20 +410,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/com.google.android.feature.PREMIER_TIER.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.feature.PREMIER_TIER.xml \
     $(LOCAL_PATH)/configs/com.google.android.feature.TURBO_PRELOAD.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.feature.TURBO_PRELOAD.xml \
     $(LOCAL_PATH)/configs/com.google.android.feature.ZERO_TOUCH.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.android.feature.ZERO_TOUCH.xml \
-    $(LOCAL_PATH)/configs/com.google.preload_photos.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/com.google.preload_photos.xml \
-    $(LOCAL_PATH)/configs/deviceowner-configuration-com.motorola.camera3.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/deviceowner-configuration-com.motorola.camera3.xml \
     $(LOCAL_PATH)/configs/feature-com.uros \ftware.goodspeed.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/feature-com.uros \ftware.goodspeed.xml \
     $(LOCAL_PATH)/configs/ims_ext_common.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/ims_ext_common.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions.com.facebook.system.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions.com.facebook.system.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-co.sitic.pp.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-co.sitic.pp.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.claroColombia.contenedor.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.claroColombia.contenedor.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.claroColombia.contenedorStub.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.claroColombia.contenedorStub.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.facebook.services.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.facebook.services.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.google.android.apps.pixelmigrate.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.google.android.apps.pixelmigrate.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.google.android.as.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.google.android.as.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.google.android.wfcactivation.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.google.android.wfcactivation.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.lenovo.lsf.user.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.lenovo.lsf.user.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.actions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.actions.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.android.provisioning.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.android.provisioning.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.att.phone.extensions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.att.phone.extensions.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.attvowifi.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.attvowifi.xml \
@@ -449,18 +429,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.easyprefix.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.easyprefix.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.entitlement.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.entitlement.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.faceunlock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.faceunlock.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.fmplayer.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.fmplayer.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.gamemode.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.gamemode.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.genie.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.genie.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.help.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.help.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.moto.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.moto.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.motodisplay.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.motodisplay.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.omadm.service.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.omadm.service.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.omadm.vzw.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.omadm.vzw.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.settings.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.settings.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.telprov.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.telprov.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.motorola.vzw.pco.extensions.pcoreceiver.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.motorola.vzw.pco.extensions.pcoreceiver.xml \
-    $(LOCAL_PATH)/configs/privapp-permissions-com.payjoy.access.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.payjoy.access.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.qualcomm.qcrilmsgtunnel.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.qualcomm.qcrilmsgtunnel.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.telcel.contenedor.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.telcel.contenedor.xml \
     $(LOCAL_PATH)/configs/privapp-permissions-com.uros \ftware.goodspeed.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-com.uros \ftware.goodspeed.xml \
