@@ -205,3 +205,15 @@ TARGET_USERIMAGES_USE_F2FS := true
 # Power
 TARGET_USES_INTERACTION_BOOST := true
 TARGET_TAP_TO_WAKE_NODE := "/sys/class/touchscreen/NVT-ts/double_click"
+
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2022-01-01
+
+# SELinux
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
