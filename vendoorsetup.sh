@@ -1,0 +1,3 @@
+add_lunch_combo lineage_hanoip-user
+add_lunch_combo lineage_hanoip-userdebug
+add_lunch_combo lineage_hanoip-eng
