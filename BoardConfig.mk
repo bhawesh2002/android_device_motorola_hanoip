@@ -54,7 +54,7 @@ SELINUX_IGNORE_NEVERALLOWS := true
 
 # Kernel modules - Audio
 TARGET_MODULE_ALIASES += \
-     adsp_loader_dlkm.ko:audio_adsp_loader.ko \
+    adsp_loader_dlkm.ko:audio_adsp_loader.ko \
     apr_dlkm.ko:audio_apr.ko \
     bolero_cdc_dlkm.ko:audio_bolero_cdc.ko \
     hdmi_dlkm.ko:audio_hdmi.ko \
@@ -116,7 +116,7 @@ TARGET_USE_QTI_BT_STACK := true
 
 # Dex
 ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
+  ifneq ($(TARGET_BUILD_VARIANT),userdebug)
     WITH_DEXPREOPT ?= true
   endif
 endif
