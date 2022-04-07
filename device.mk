@@ -35,6 +35,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# AOSP Recovery
+TARGET_USES_AOSP_RECOVERY := true
+
 PRODUCT_PACKAGES += \
     FrameworksResCommon \
     CarrierConfigResCommon \
