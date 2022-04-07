@@ -17,6 +17,8 @@
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 
+BOARD_VENDOR := motorola
+
 DEVICE_PATH := device/motorola/hanoip
 
 # Architecture
@@ -52,6 +54,9 @@ TARGET_KERNEL_SOURCE := kernel/motorola/sm6150
 TARGET_KERNEL_CONFIG := vendor/hanoip_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 SELINUX_IGNORE_NEVERALLOWS := true
+
+#properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Kernel modules - Audio
 TARGET_MODULE_ALIASES += \
