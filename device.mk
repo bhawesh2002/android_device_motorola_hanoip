@@ -330,6 +330,10 @@ PRODUCT_PACKAGES += \
     sap.conf \
     xtwifi.conf
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl:64 \
